@@ -1,0 +1,317 @@
+/*BORDERBOX*/
+* {
+  /*bxz*/
+  /*el tamaño de la caja incluye margin y border*/
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*RESET*/
+header, body, footer, ul, li, p {
+  padding: 0px;
+  margin: 0px auto;
+}
+
+/*
+background_color: #E6E6E6;
+light_colorcolor: #A6EEFF;
+principal_color: #07D0FF;
+dark_blue_color: #333399;
+*/
+
+/*GENERAL*/
+body{
+  font-family: 'Roboto Condensed', sans-serif;
+    /*font-size: 17px; este es el tamaño que utilizo para el diseño*/
+}
+html{
+  background-color: #E6E6E6;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+/*HEADER*/
+header{
+    text-align: center;
+}
+    header h1{
+      font-size: 3rem;
+      display: inline-block;
+      padding-right: 20px;
+    }
+    header h2{
+      font-size: 2rem;
+      display: inline-block;
+      text-align: center;
+    }
+    .logo-head{
+      height: 122px; /*¡¡¡!!!le tengo que indicar la altura de la imagen para que no deje un espacio en blanco. No se por qué.*/
+    }
+
+
+
+/*TEXTO GENERAL*/
+article {
+    margin-top: 20px;/*CUIDADO CON ESTO************/
+}
+  article p{
+    font-size: 1rem;
+    padding: 10px 5px 10px 5px;
+  }
+  article h4 a,
+  article h4 a:link,
+  article h4 a:visited,
+  article h4 a:hover,
+  article h4 a:active{
+    text-decoration: none;
+    color: #333399;
+  }
+  .readmore{
+    font-size: 0.8rem;
+    text-decoration: none;
+    text-align: right;
+    display: block;
+  }
+  article li{
+    list-style-position: inside;
+  }
+
+/*CONTENT & NEWS*/
+.content h1,
+.content-left h1,
+.content h2, /*no se por qué en las páginas que no son la principal el título tiene h2 en vez h1*/
+.content-left h2,
+.news h3{
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333399;
+  background-color: #07D0FF;
+  /*border-top: 3px solid #333399;*/
+  padding: 4px 10px 3px 10px;
+  box-shadow: 0px 3px 4px -1px rgb(0,0,0,0);
+}
+.news h4{
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0px;
+  padding-top: 5px;
+}
+
+/*NAV IN MAIN MENU*/
+.nav.menu{
+  width: 100%;
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #00CCFF;
+  font-weight: 600;
+}
+.mainmenu ul{
+  list-style-type: none;
+  display: inline;
+}
+.mainmenu li{
+  margin: 0px;
+  padding: 5px;
+  /*box-shadow: 0px 3px 4px -1px rgb(0,0,0,0);*/
+  overflow-x: hidden;
+  border-bottom-style: solid;
+  border-width: 0 0 2px 0;
+  flex-grow: 1;
+  text-align: center;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-color: #E6E6E6;
+}
+.mainmenu ul li ul{
+  display: none;
+  visibility: hidden;
+  position: absolute;
+    background-color: #00CCFF;
+}
+.mainmenu ul li:hover ul{
+  display: block;
+  visibility: visible;
+}
+
+/*.mainmenu li{
+  margin: 0px;
+  padding: 5px;
+  overflow-x: hidden;
+  border-bottom-style: solid;
+  border-width: 0 0 2px 0;
+  border-color: #E6E6E6;
+  flex-grow: 1;
+  text-align: center;
+}*/
+/*.mainmenu li:not(:last-child){
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-color: #E6E6E6;
+}*/
+.mainmenu a{
+  text-decoration:none;
+}
+
+/*NEWS IN HOMEPAGE*/
+.news{
+   width: 100%; /*this is necesary because the father layer is a flexbox
+}
+  .news ul{
+    list-style-type: none;
+  }
+  .news li:nth-child(2n+1) {   /* selecciona todos los elementos impares de una lista */
+    padding-left: 10px;
+    padding-right: 5px;
+  }
+  .news li:nth-child(2n) {  /* selecciona todos los elementos pares de una lista */
+    padding-right: 10px;
+    padding-left: 5px;
+  }
+
+/*FOOTER*/
+footer{
+  background-color: #07D0FF;
+  font-size: 0.7rem;
+  text-align: center;
+  padding: 10px 0px 10px 0px;
+  margin-top: 20px;/*CUIDADO CON ESTO************/
+  box-shadow: 0px 3px 4px -1px rgb(0,0,0,0);
+}
+  footer .footer1{
+    display: inline-block;
+    padding-right: 5px;
+  }
+  footer .footer2{
+    display: inline-block;
+    padding-top: 5px;
+  }
+  footer img{
+    /*height: 3em;*/
+    max-height: 1.8rem; /*para que esto funcione bien el width y el height de la imagen no pueden estar en el HTML*/
+    border-style: none;
+    vertical-align: middle;
+  }
+  /*footer .custom{
+    display: inline;
+  }*/
+
+/* RESPONSIVE
+========================================================================= */
+
+/* 320
+------------------------------------------------------------------------- */
+@media all and (min-width: 320px) {
+  html{
+    font-size: 1.05rem;
+  }
+  header{
+    background-image: url('../images/sup-lit.png');
+    background-size: cover;
+  }
+  /*ESTRUCTURA GENERAL*/
+  .sidebar-right{
+    display: none;
+  }
+}
+
+/* 560 TABLET VERTICAL
+------------------------------------------------------------------------- */
+@media all and (min-width: 560px) {
+  html{
+    font-size: 1.05rem;
+  }
+  header{
+    background-image: url('../images/sup-mid.png');
+    background-size: cover;
+    text-align: left;
+  }
+  /*ESTRUCTURA GENERAL*/
+  .content-left{
+    width: 75%;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .sidebar-right{
+    width: 24%; /*With 24% it dosn't work, why???*/
+    display: inline-block;
+    vertical-align: top;
+  }
+/*NEWS IN HOMEPAGE*/
+/*EL MÓDULO TIENE QUE TENER EL LAYOUT VERTICAL*/
+  .newsflash-vert{
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+/* 768 tablet horizontal
+------------------------------------------------------------------------- */
+@media all and (min-width: 768px) {
+  html{
+    font-size: 1.2rem;
+  }
+  header{
+    background-image: url('../images/sup-big.png');
+    background-size: cover;
+    text-align: left;
+  }
+  /*ESTRUCTURA GENERAL*/
+  .content-left{
+    width: 75%;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .sidebar-right{
+    width: 24%; /*With 24% it dosn't work, why???*/
+    display: inline-block;
+    vertical-align: top;
+  }
+  /*NEWS IN HOMEPAGE*/
+  /*EL MÓDULO TIENE QUE TENER EL LAYOUT VERTICAL*/
+    .newsflash-vert{
+      display: flex;
+      flex-direction: row;
+    }
+}
+
+/* 1280 Escritorios muy anchos
+------------------------------------------------------------------------- */
+@media all and (min-width: 1000px) {
+  html{
+    font-size: 1.1rem;
+  }
+  body{
+    width:1000px;
+  }
+  header{
+    background-image: url('../images/sup-big.png');
+    background-size: cover;
+    text-align: left;
+  }
+  /*ESTRUCTURA GENERAL*/
+  .content-left{
+    width: 75%;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .sidebar-right{
+    width: 24%; /*With 24% it dosn't work, why???*/
+    display: inline-block;
+    vertical-align: top;
+  }
+  /*NEWS IN HOMEPAGE*/
+  /*EL MÓDULO TIENE QUE TENER EL LAYOUT VERTICAL*/
+  .newsflash-vert{
+    display: flex;
+    flex-direction: row;
+  }
+  .newsflash-item{
+    flex-grow: 1;
+  }
+}
