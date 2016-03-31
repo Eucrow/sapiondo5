@@ -1,7 +1,7 @@
 /*BORDERBOX*/
 * {
   /*bxz*/
-  /*el tama��o de la caja incluye margin y border*/
+  /*the size box include margin and border*/
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -14,22 +14,20 @@ header, body, footer, ul, li, p {
 }
 
 /*
-background_color: #E6E6E6; 230,230,230
-light_colorcolor: #A6EEFF;
-principal_color: #07D0FF;
-dark_blue_color: #333399;
+background_color: #E6E6E6 rgb: 230,230,230
+light_colorcolor: #A6EEFF
+principal_color: #07D0FF
+dark_blue_color: #333399
 */
 
 /*GENERAL*/
 body{
   font-family: 'Roboto Condensed', sans-serif;
-    /*font-size: 17px; este es el tamaño que utilizo para el diseño*/
 }
 html{
   background-color: #E6E6E6;
   font-family: 'Roboto Condensed', sans-serif;
 }
-
 
 /*HEADER*/
 header{
@@ -46,13 +44,11 @@ header{
       text-align: center;
     }
     .logo-head{
-      height: 122px; /*¡¡¡!!!le tengo que indicar la altura de la imagen para que no deje un espacio en blanco. No se por qué.*/
-      border: 1px solid #E6E6E6;/*esto es para disimular los bordes grises del men�*/
+      height: 122px; /*!!!!!!!!!I've to put the image height to avoid a blank space. I don't know why*/
+      border: 1px solid #E6E6E6;/*CHEAT: to hide the grey borders of the menu's sides*/
     }
 
-
-
-/*TEXTO GENERAL*/
+/*GENERAL TEXT*/
 article {
     margin-top: 20px;/*CUIDADO CON ESTO************/
 }
@@ -81,7 +77,7 @@ article {
 /*CONTENT & NEWS*/
 .content h1,
 .content-left h1,
-.content h2, /*no se por qué en las páginas que no son la principal el título tiene h2 en vez h1*/
+.content h2, /*I don't know why, but in the principal page the title has h1, but the other has h2 instead*/
 .content-left h2,
 .news h3{
   font-size: 1.2rem;
@@ -90,7 +86,7 @@ article {
   background-color: #07D0FF;
   padding: 4px 10px 3px 10px;
   box-shadow: 0px 3px 4px -1px rgb(0,0,0,0);
-  border: 1px solid #E6E6E6;/*esto es para disimular los bordes grises del men�*/
+  border: 1px solid #E6E6E6;/*CHEAT: to hide the grey borders of the menu's sides*/
 }
 .news h4{
   font-size: 1.1rem;
@@ -107,7 +103,6 @@ article {
   font-weight: 600;
     color: #333399;
 }
-
 .nav.menu a,
 .nav.menu a:link,
 .nav.menu a:visited,
@@ -116,7 +111,6 @@ article {
   text-decoration: none;
   color: #333399;
 }
-
 ul.nav.menu{
 		display: flex;
 		flex-wrap: wrap;
@@ -125,7 +119,6 @@ ul.nav.menu{
 		margin: 0;
 		padding: 0;
 	}
-
   ul.nav.menu > li{
     flex: 0 1 auto;
     flex-grow: 1;
@@ -138,34 +131,27 @@ ul.nav.menu{
     border: 1px solid #E6E6E6;
     text-align: center;
   }
-
   ul.nav.menu > li:hover{
       background-color: rgba(255, 255, 255, 0.5);
   }
-
   ul.nav.menu > li.parent{
     padding-right: 20px;/*this is for the down arrow*/
   }
-
   ul.nav.menu > li.parent::before{
     content: "\25BC";/*this is the down arrow*/
     position: absolute;
     right: 3px;
     font-size: 0.6rem;
  }
-
     ul.nav.menu > li > a,
     ul.nav.menu > li > span{
-      /*display: flex;*/
-      /*align-items: flex-start;*/
       text-decoration: none;
     }
-
        ul.nav.menu > li > a + ul,
        ul.nav.menu > li > span + ul{
          display: none;
          position: absolute;
-         margin: 4px 0 0 0;/*ajuste hecho a ojo ya que se coloca debajo del span */
+         margin: 4px 0 0 0;/*CHEAT: ul is just under the span and no under the li box, so It is necessary to put 4px*/
          padding: 0px 0px 10px 0px;
          font-size: 0.9rem;
          list-style-type: none;
@@ -173,106 +159,42 @@ ul.nav.menu{
          min-width: 100%;
          z-index: 10;
       }
-
        ul.nav.menu > li:hover > a + ul,
        ul.nav.menu > li:hover > span + ul{
          display: block;
          text-align: left;
       }
-
          ul.nav.menu > li > a + ul > li,
          ul.nav.menu > li > span + ul >li{
            margin: 0;
            padding: 5px 5px 1px 10px;
-           /*-webkit-box-shadow: 0px 10px 5px -8px rgba(230, 230, 230, 0.75);
-           -moz-box-shadow: 0px 10px 5px -8px rgba(230, 230, 230, 0.75);
-           box-shadow: 0px 10px 5px -8px rgba(230, 230, 230, 0.75);*/
            border-bottom: 2px solid #E6E6E6;
         }
-
            ul.nav.menu > li > a + ul > li > a,
            ul.nav.menu > li > span + ul > li > a{
              display: block;
              text-decoration: none;
           }
-
           ul.nav.menu > li > a + ul > li:hover,
           ul.nav.menu > li > span + ul > li:hover{
             background-color: rgba(255, 255, 255, 0.5);
           }
-/*.nav.menu{
-  width: 100%;
-  padding: 0px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  background-color: #00CCFF;
-  font-weight: 600;
-}
-.mainmenu ul{
-  list-style-type: none;
-  display: inline;
-}
-.mainmenu li{
-  margin: 0px;
-  padding: 5px;
-  overflow-x: hidden;
-  flex-grow: 1;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-.mainmenu ul li ul{
-  display: none;
-  visibility: hidden;
-  position: relative;
-  background-color: #00CCFF;
-  border: 0px;
-  padding: 5px;
-}
-.mainmenu ul li:hover{
-  background-color: #aaaaaa;
-}
-.mainmenu ul li:hover ul{
-  display:block;
-  visibility: visible;
-  background-color: #aaaaaa;
-}*/
-
-/*para quitar la última línea vertical del menú-->no vale al ser un flexbox porque al mostrarse en dos líneas la superior sigue teniendo la línea vertical
-/*.mainmenu li{
-  margin: 0px;
-  padding: 5px;
-  overflow-x: hidden;
-  border-bottom-style: solid;
-  border-width: 0 0 2px 0;
-  border-color: #E6E6E6;
-  flex-grow: 1;
-  text-align: center;
-}*/
-/*.mainmenu li:not(:last-child){
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-color: #E6E6E6;
-}*/
 .mainmenu a{
   text-decoration:none;
 }
 
 /*NEWS IN HOMEPAGE*/
 .news{
-   width: 100%; /*this is necesary because the father layer is a flexbox
+   width: 100%; /*this is mandatory because the father layer is a flexbox*/
 }
   .news ul{
     list-style-type: none;
   }
-  .news li:nth-child(2n+1) {   /* selecciona todos los elementos impares de una lista */
+  .news li:nth-child(2n+1) {
     padding-left: 10px;
     padding-right: 5px;
   }
-  .news li:nth-child(2n) {  /* selecciona todos los elementos pares de una lista */
+  .news li:nth-child(2n) {
     padding-right: 10px;
     padding-left: 5px;
   }
@@ -295,14 +217,10 @@ footer{
     padding-top: 5px;
   }
   footer img{
-    /*height: 3em;*/
     max-height: 1.8rem; /*para que esto funcione bien el width y el height de la imagen no pueden estar en el HTML*/
     border-style: none;
     vertical-align: middle;
   }
-  /*footer .custom{
-    display: inline;
-  }*/
 
 /* RESPONSIVE
 ========================================================================= */
@@ -317,13 +235,13 @@ footer{
     background-image: url('../images/sup-lit.png');
     background-size: cover;
   }
-  /*ESTRUCTURA GENERAL*/
+  /*GENERAL STRUCTURE*/
   .sidebar-right{
     display: none;
   }
 }
 
-/* 560 TABLET VERTICAL
+/* 560 VERTICAL TABLET
 ------------------------------------------------------------------------- */
 @media all and (min-width: 560px) {
   html{
@@ -334,14 +252,14 @@ footer{
     background-size: cover;
     text-align: left;
   }
-  /*ESTRUCTURA GENERAL*/
+  /*GENERAL STRUCTURE*/
   .content-left{
     width: 75%;
     display: inline-block;
     vertical-align: top;
   }
   .sidebar-right{
-    width: 24%; /*With 24% it dosn't work, why???*/
+    width: 24%;
     display: inline-block;
     vertical-align: top;
   }
@@ -353,7 +271,7 @@ footer{
   }
 }
 
-/* 768 tablet horizontal
+/* 768 HORIZONATAL TABLET
 ------------------------------------------------------------------------- */
 @media all and (min-width: 768px) {
   html{
@@ -364,26 +282,26 @@ footer{
     background-size: cover;
     text-align: left;
   }
-  /*ESTRUCTURA GENERAL*/
+  /*GENERAL STRUCTURE*/
   .content-left{
     width: 75%;
     display: inline-block;
     vertical-align: top;
   }
   .sidebar-right{
-    width: 24%; /*With 24% it dosn't work, why???*/
+    width: 24%;
     display: inline-block;
     vertical-align: top;
   }
   /*NEWS IN HOMEPAGE*/
-  /*EL MÓDULO TIENE QUE TENER EL LAYOUT VERTICAL*/
+  /*IS MANDATORY THAT THE MODULE HAS THE LAYOUT IN VERTICAL*/
     .newsflash-vert{
       display: flex;
       flex-direction: row;
     }
 }
 
-/* 1280 Escritorios muy anchos
+/* 1280
 ------------------------------------------------------------------------- */
 @media all and (min-width: 1000px) {
   html{
@@ -397,7 +315,7 @@ footer{
     background-size: cover;
     text-align: left;
   }
-  /*ESTRUCTURA GENERAL*/
+  /*GENERAL STRUCTURE*/
   .content-left{
     width: 75%;
     display: inline-block;

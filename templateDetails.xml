@@ -5,9 +5,9 @@
 	<author>Eucrow</author>
 	<authorEmail>marco.a.amez@gmail.com</authorEmail>
 	<authorUrl></authorUrl>
-	<copyright>Eucrow 2008</copyright>
+	<copyright>Eucrow 2015</copyright>
 	<license>GNU/GPL</license>
-	<version>0.1</version>
+	<version>0.8</version>
 	<description>Template create to Proyecto SAP 5 web</description>
 	<files>
 		<filename>index.php</filename>
