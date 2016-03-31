@@ -1,7 +1,7 @@
 /*BORDERBOX*/
 * {
   /*bxz*/
-  /*el tamaño de la caja incluye margin y border*/
+  /*el tama��o de la caja incluye margin y border*/
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -14,7 +14,7 @@ header, body, footer, ul, li, p {
 }
 
 /*
-background_color: #E6E6E6;
+background_color: #E6E6E6; 230,230,230
 light_colorcolor: #A6EEFF;
 principal_color: #07D0FF;
 dark_blue_color: #333399;
@@ -47,6 +47,7 @@ header{
     }
     .logo-head{
       height: 122px; /*¡¡¡!!!le tengo que indicar la altura de la imagen para que no deje un espacio en blanco. No se por qué.*/
+      border: 1px solid #E6E6E6;/*esto es para disimular los bordes grises del men�*/
     }
 
 
@@ -87,9 +88,9 @@ article {
   font-weight: bold;
   color: #333399;
   background-color: #07D0FF;
-  /*border-top: 3px solid #333399;*/
   padding: 4px 10px 3px 10px;
   box-shadow: 0px 3px 4px -1px rgb(0,0,0,0);
+  border: 1px solid #E6E6E6;/*esto es para disimular los bordes grises del men�*/
 }
 .news h4{
   font-size: 1.1rem;
@@ -102,10 +103,110 @@ article {
 .nav.menu{
   width: 100%;
   padding: 0px;
+  background-color: #07D0FF;
+  font-weight: 600;
+    color: #333399;
+}
+
+.nav.menu a,
+.nav.menu a:link,
+.nav.menu a:visited,
+.nav.menu a:hover,
+.nav.menu a:active{
+  text-decoration: none;
+  color: #333399;
+}
+
+ul.nav.menu{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+  ul.nav.menu > li{
+    flex: 0 1 auto;
+    flex-grow: 1;
+    margin: 0;
+    padding: 5px 0px 5px 0px;
+    position: relative;
+    font-weight: 600;
+    /*transition: all linear 1s;*/
+      background-color: #00CCFF;
+    border: 1px solid #E6E6E6;
+    text-align: center;
+  }
+
+  ul.nav.menu > li:hover{
+      background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  ul.nav.menu > li.parent{
+    padding-right: 20px;/*this is for the down arrow*/
+  }
+
+  ul.nav.menu > li.parent::before{
+    content: "\25BC";/*this is the down arrow*/
+    position: absolute;
+    right: 3px;
+    font-size: 0.6rem;
+ }
+
+    ul.nav.menu > li > a,
+    ul.nav.menu > li > span{
+      /*display: flex;*/
+      /*align-items: flex-start;*/
+      text-decoration: none;
+    }
+
+       ul.nav.menu > li > a + ul,
+       ul.nav.menu > li > span + ul{
+         display: none;
+         position: absolute;
+         margin: 4px 0 0 0;/*ajuste hecho a ojo ya que se coloca debajo del span */
+         padding: 0px 0px 10px 0px;
+         font-size: 0.9rem;
+         list-style-type: none;
+         background-color: #07D0FF;
+         min-width: 100%;
+         z-index: 10;
+      }
+
+       ul.nav.menu > li:hover > a + ul,
+       ul.nav.menu > li:hover > span + ul{
+         display: block;
+         text-align: left;
+      }
+
+         ul.nav.menu > li > a + ul > li,
+         ul.nav.menu > li > span + ul >li{
+           margin: 0;
+           padding: 5px 5px 1px 10px;
+           /*-webkit-box-shadow: 0px 10px 5px -8px rgba(230, 230, 230, 0.75);
+           -moz-box-shadow: 0px 10px 5px -8px rgba(230, 230, 230, 0.75);
+           box-shadow: 0px 10px 5px -8px rgba(230, 230, 230, 0.75);*/
+           border-bottom: 2px solid #E6E6E6;
+        }
+
+           ul.nav.menu > li > a + ul > li > a,
+           ul.nav.menu > li > span + ul > li > a{
+             display: block;
+             text-decoration: none;
+          }
+
+          ul.nav.menu > li > a + ul > li:hover,
+          ul.nav.menu > li > span + ul > li:hover{
+            background-color: rgba(255, 255, 255, 0.5);
+          }
+/*.nav.menu{
+  width: 100%;
+  padding: 0px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   background-color: #00CCFF;
   font-weight: 600;
 }
@@ -116,29 +217,31 @@ article {
 .mainmenu li{
   margin: 0px;
   padding: 5px;
-  /*box-shadow: 0px 3px 4px -1px rgb(0,0,0,0);*/
   overflow-x: hidden;
-  border-bottom-style: solid;
-  border-width: 0 0 2px 0;
   flex-grow: 1;
   text-align: center;
-  border-right-style: solid;
-  border-right-width: 1px;
-  border-left-style: solid;
-  border-left-width: 1px;
-  border-color: #E6E6E6;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 .mainmenu ul li ul{
   display: none;
   visibility: hidden;
-  position: absolute;
-    background-color: #00CCFF;
+  position: relative;
+  background-color: #00CCFF;
+  border: 0px;
+  padding: 5px;
+}
+.mainmenu ul li:hover{
+  background-color: #aaaaaa;
 }
 .mainmenu ul li:hover ul{
-  display: block;
+  display:block;
   visibility: visible;
-}
+  background-color: #aaaaaa;
+}*/
 
+/*para quitar la última línea vertical del menú-->no vale al ser un flexbox porque al mostrarse en dos líneas la superior sigue teniendo la línea vertical
 /*.mainmenu li{
   margin: 0px;
   padding: 5px;
